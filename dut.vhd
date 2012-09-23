@@ -14,7 +14,7 @@ end entity dut;
 
 architecture RTL of dut is
 	constant MIN_COUNT : integer := 0;
-	constant MAX_COUNT : integer := 5;
+	constant MAX_COUNT : integer := 50;
 	signal count       : integer range 0 to MAX_COUNT;
 
 begin
