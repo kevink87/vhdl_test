@@ -6,7 +6,7 @@ use IEEE.std_logic_1164.all;
 -- Frequency = 1/(2*PERIOD)
 entity clock_generator is
 	generic(
-		PERIOD : time := 25 ns
+		PERIOD : time := 50 ns
 	);
 	port(
 		clock : out std_logic
