@@ -32,5 +32,9 @@ begin
 			clock    => clock,
 			reset    => reset
 		);
+		
+	wrapper_instance : entity work.wrapper
+		port map(clk => clock,
+			     rst => reset);
 
 end architecture STR;
