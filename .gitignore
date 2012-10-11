@@ -28,6 +28,11 @@ local.properties
 # PDT-specific
 .buildpath
 
+#################
+## Sigasi
+#################
+
+Common Libraries/*
 
 #################
 ## Visual Studio
