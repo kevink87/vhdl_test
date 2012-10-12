@@ -13,6 +13,7 @@ architecture STR of testbench is
 	signal clock    : std_logic;
 	signal reset    : std_logic;
 	constant PERIOD : time := 50 ns;    -- Half the clock period. The frequency will be 1/(2*PERIOD) = 100 MHz
+	signal fancy_clk : std_logic;
 
 begin
 	reset <= '0';
@@ -22,7 +23,8 @@ begin
 			PERIOD => PERIOD
 		)
 		port map(
-			clock => clock
+			clock => clock,
+			fancy_clock => fancy_clk
 		);
 
 	dut_instance : entity work.dut(RTL)
@@ -36,7 +38,7 @@ begin
 		);
 		
 	wrapper_instance : entity work.wrapper
-		port map(clk => clock,
+		port map(clk => fancy_clk,
 			     rst => reset);
 
 end architecture STR;
