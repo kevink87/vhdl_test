@@ -15,6 +15,8 @@ architecture STR of testbench is
 	constant PERIOD : time := 50 ns;    -- Half the clock period. The frequency will be 1/(2*PERIOD) = 100 MHz
 
 begin
+	reset <= '0';
+
 	clock_generator_instance : entity work.clock_generator(BEH)
 		generic map(
 			PERIOD => PERIOD
