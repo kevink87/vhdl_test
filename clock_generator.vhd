@@ -39,9 +39,9 @@ begin
 	FANCY_CLOCK_DRIVER : process is
 	begin
 		fancy_clock <= '0';
-		wait for CLOCK_PERIOD / 2 * 8 + 5;
+		wait for CLOCK_PERIOD / 2 * 8 + 5 ns;
 		fancy_clock <= '1';
-		wait for CLOCK_PERIOD / 2 * 3 + 2;
+		wait for CLOCK_PERIOD / 2 * 3 + 2 ns;
 	end process FANCY_CLOCK_DRIVER;
 
 end architecture BEH;
